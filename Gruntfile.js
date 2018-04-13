@@ -7,14 +7,23 @@ module.exports = function (grunt) {
                     base: '.',
                     livereload: true,
                     open: true,
-                    useAvailablePort: true,
-                    keepalive: true
+                    useAvailablePort: true
                 }
+            }
+        },
+
+        watch: {
+            html: {
+                files: '*.html'
+            },
+            options: {
+                livereload: true
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('serve', ['connect']);
+    grunt.registerTask('serve', ['connect', 'watch']);
 };
