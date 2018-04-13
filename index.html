@@ -15,9 +15,14 @@
                 </section>
             </div>
 
+            <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
             <script src="node_modules/reveal.js/js/reveal.js"></script>
             <script>
-                Reveal.initialize();
+                Reveal.initialize({
+                    dependencies: [
+                        {src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true}
+                    ]
+                });
             </script>
         </div>
     </body>
