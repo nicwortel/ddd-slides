@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css" />
         <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css" />
+        <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
     </head>
     <body>
         <div class="reveal">
@@ -20,7 +21,17 @@
             <script>
                 Reveal.initialize({
                     dependencies: [
-                        {src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true}
+                        {
+                            src: 'node_modules/reveal.js/plugin/notes/notes.js',
+                            async: true
+                        },
+                        {
+                            src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                            async: true,
+                            callback: function () {
+                                hljs.initHighlightingOnLoad();
+                            }
+                        }
                     ]
                 });
             </script>
