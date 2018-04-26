@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Introduction to DDD</title>
+
+        <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css" />
+        <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css" />
+        <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Introduction to domain-driven design</h2>
+
+                    <p><img src="images/domain-driven-design.png" height="250" /></p>
+
+                    <p>
+                        <small>Nic Wortel</small>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Overheard</h2>
+
+                        <p>
+                            <small>Source: Implementing Domain-Driven Design</small>
+                        </p>
+
+                        <aside class="notes">Please raise your hand if you recognize yourself in one of these
+                            statements.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <blockquote>The code breaks a lot when I try to change it. Does anyone actually understand what
+                            it's supposed to do?
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>When I try to change something in this part of the system, I have to be careful not
+                            to break completely unrelated functionalities somewhere else.
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>I wish the developers understood better what we do here.</blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>The developers always have some strange way of talking about what our software does.
+                            If we talk about A, they say it's really called B. It's like we have to have some sort of
+                            dictionary and road map on hand every time we try to communicate what we need.
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <blockquote>We are shipping software. It's not always with the greatest result, and changes seem
+                            to take longer than they should.
+                        </blockquote>
+
+                        <aside class="notes">DDD offers solutions to these problems.</aside>
+                    </section>
+
+                    <section>
+                        <p>Recognizable?</p>
+
+                        <p>Domain-driven design can help you.</p>
+                    </section>
+
+                    <section>
+                        <h2>Goals of this presentation</h2>
+
+                        <p>After this presentation, you will...</p>
+
+                        <ul>
+                            <li>Know what DDD is</li>
+                            <li>Know the difference between strategic and tactical DDD</li>
+                            <li>Know what a ubiquitous language is</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Use / importance</h2>
+
+                        <p>Knowing about domain-driven design will help you to:</p>
+
+                        <ul>
+                            <li>Improve your collaboration with team members (developers and domain experts)</li>
+                            <li>Understand where the heart of the software is and which parts deserve the most attention
+                            </li>
+                            <li>Design software that is future-proof and can keep up with changing requirements</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Future presentations</h2>
+
+                        <ul>
+                            <li>Strategic DDD
+                                <ul>
+                                    <li>Ubiquitous language</li>
+                                    <li>Domain, subdomains, bounded contexts<br />&nbsp;</li>
+                                </ul>
+                            </li>
+                            <li>Tactical DDD
+                                <ul>
+                                    <li>Entities, value objects, services</li>
+                                    <li>Aggregates</li>
+                                    <li>Domain events</li>
+                                    <li>Repositories</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Structure</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What is domain-driven design?</h2>
+
+                        <blockquote class="fragment">DDD is a set of tools that assist in designing and implementing
+                            software that delivers high value, both strategically and tactically.
+                        </blockquote>
+
+                        <aside class="notes">
+                            <p>Important: DDD is not a technical tool but an approach to software design.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Traditional software issues</h2>
+
+                        <ul>
+                            <li>Developers and domain experts talk in different languages, making it difficult for them
+                                to understand each other and collaborate
+                            </li>
+                            <li class="fragment">Software that gets developed often results in a translation/mapping
+                                between how the business thinks/operates and how the developer interprets that
+                            </li>
+                            <li class="fragment">Changes to the software take a lot of time to implement, and code
+                                breaks easily when changes are made
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Traditional software issues</h2>
+
+                        <ul>
+                            <li>Developers misinterpret user requirements, resulting in software that misses the point.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>How DDD helps</h2>
+
+                        <ul>
+                            <li>Creates a common, shared language between the domain experts, the software developers,
+                                and the software, without requiring translation in between
+                            </li>
+                            <li class="fragment">Facilitates a creative collaboration between domain experts and
+                                technical experts (developers), in order to produce software with high value for the
+                                business
+                            </li>
+                            <li class="fragment">Results in software that is built for change</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>"The Blue Book"</h2>
+                        <h4>Domain-Driven Design: Tackling Complexity in the Heart of Software</h4>
+
+                        <p>Eric Evans, 2003</p>
+
+                        <img src="images/domain-driven-design-evans.jpg" height="300" />
+
+                        <aside class="notes">
+                            <p>Domain-driven design was coined by Eric Evans in his book with the same name.</p>
+
+                            <p>Eric Evans has worked as a designer and programmer on large systems in several complex
+                                business and technical domains since the 1980's.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>"The Red Book"</h2>
+                        <h4>Implementing Domain-Driven Design</h4>
+
+                        <p>Vaughn Vernon, 2013</p>
+
+                        <img src="images/implementing-domain-driven-design-vernon.jpg" height="300" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Strategic vs Tactical design</h2>
+                    </section>
+
+                    <section data-background-color="#000" data-background-image="images/sun-tzu.jpg"
+                        data-background-size="75%" data-background-position="bottom left">
+                        <blockquote>
+                            <p>Strategy without tactics is the slowest route to victory. Tactics without strategy is the
+                                noise before defeat.</p>
+
+                            <footer>
+                                <cite>— Sun Tzu (544-496 BC)</cite>
+                            </footer>
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>strategy</dt>
+                            <dd></dd>
+
+                            <dt>strategic design</dt>
+                            <dd>Modeling and design decisions that apply to large parts of the system.</dd>
+
+                            <dt>tactical design</dt>
+                            <dd></dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <h2>Strategic design</h2>
+                        <ul>
+                            <li></li>
+                            <li>Focusing effort/investments on the core of the system</li>
+                            <li>Helps to cleanly separate systems and business concerns</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Tactical design</h2>
+                        <ul>
+                            <li>Allows developers to produce software that correctly reflects the mental model of the
+                                domain expert(s)
+                            </li>
+                            <li>Allows developers to produce software that is highly testable and less error prone</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Strategic patterns</h2>
+
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>The ubiquitous language</h2>
+                    </section>
+
+                    <section>
+                        <p>Inspector:</p>
+
+                        <blockquote>I want to disable checklists</blockquote>
+                    </section>
+
+                    <section>
+                        <p><img src="images/jira-ticket.png" height="266" /></p>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim data-noescape class="php">
+                            class ChecklistDefinitionStatusService
+                            {
+                                public function setVisible($checklistDefinitionId, $visible)
+                                {
+                                    $this->visible = $visible;
+                                }
+                            }
+                        </code></pre>
+
+                        <pre><code data-trim class="php">
+                            $checklistDefinitionStatusService->setVisible(false);
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>u·biq·ui·tous</dt>
+                            <dd>Adjective: present, appearing, or found everywhere.</dd>
+                            <dd>Synonyms: omnipresent</dd>
+                        </dl>
+
+                        <p>&nbsp;</p>
+
+                        <dl>
+                            <dt>ubiquitous language</dt>
+                            <dd>A shared language developed by the team - a team composed of both domain experts and
+                                software developers.
+                            </dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <p><img src="images/ubiquitous-language.jpg" height="469" /></p>
+                    </section>
+
+                    <section>
+                        <div>
+                            <p>The ubiquitous language is used everywhere:</p>
+
+                            <ul>
+                                <li>in user stories</li>
+                                <li>during discussions</li>
+                                <li>in documentation</li>
+                                <li>in code</li>
+                            </ul>
+
+                            <p>...by everyone on the team.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Context matters</h2>
+                    </section>
+
+                    <section>
+                        <dl>
+                            <dt>context</dt>
+                            <dd>The setting in which a word or statement appears that determines its meaning.</dd>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <ul>
+                            <li>is developed by having discussions with both consensus and compromise</li>
+                            <li>only exists within a specific (bounded) context</li>
+                            <li>grows and changes over time</li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+
+            <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+            <script src="node_modules/reveal.js/js/reveal.js"></script>
+            <script>
+                Reveal.initialize({
+                    dependencies: [
+                        {
+                            src: 'node_modules/reveal.js/plugin/notes/notes.js',
+                            async: true
+                        },
+                        {
+                            src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                            async: true,
+                            callback: function () {
+                                hljs.initHighlightingOnLoad();
+                            }
+                        }
+                    ]
+                });
+            </script>
+        </div>
+    </body>
+</html>
