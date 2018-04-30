@@ -289,6 +289,35 @@
                         <pre><code data-trim class="php">
                             $checklistDefinitionStatusService->setVisible(false);
                         </code></pre>
+
+                        <aside class="notes">
+                            <p>Developers have their own terminology for the things in the problem domain</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <p><img src="images/what-are-they-talking-about.jpg" height="388" /></p>
+                    </section>
+
+                    <section>
+                        <h2>Why is this a problem?</h2>
+
+                        <ul>
+                            <li>constant need to translate from the problem (domain) language to the technical language
+                            </li>
+                            <li>people use the same term differently without realizing</li>
+                            <li>information is lost in translation, misaligned concepts are used</li>
+                            <li>developed software misses the point</li>
+                            <li>users will have to compensate</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>they will have to translate from the provided solution to the actual problem, using
+                                    workarounds or awkward workflows
+                                </li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
@@ -309,41 +338,60 @@
                     </section>
 
                     <section>
+                        <h2>Characteristics</h2>
+
+                        <ul>
+                            <li>used everywhere:
+                                <ul>
+                                    <li>in user stories</li>
+                                    <li>during discussions and meetings</li>
+                                    <li>in BDD features and scenarios</li>
+                                    <li>in documentation</li>
+                                    <li>in test and source code</li>
+                                </ul>
+                            </li>
+                            <li>used by everyone on the team: developers and domain experts</li>
+                            <li>evolves over time as new concepts are discovered</li>
+                        </ul>
+                    </section>
+
+                    <section>
                         <p><img src="images/ubiquitous-language.jpg" height="469" /></p>
                     </section>
 
                     <section>
-                        <div>
-                            <p>The ubiquitous language is used everywhere:</p>
-
-                            <ul>
-                                <li>in user stories</li>
-                                <li>during discussions</li>
-                                <li>in documentation</li>
-                                <li>in code</li>
-                            </ul>
-
-                            <p>...by everyone on the team.</p>
-                        </div>
+                        <p><img src="images/ubiquitous-language-intersection.png" width="1200" height="525" /></p>
                     </section>
 
                     <section>
-                        <h2>Context matters</h2>
-                    </section>
+                        <h2>How to develop a ubiquitous language?</h2>
 
-                    <section>
-                        <dl>
-                            <dt>context</dt>
-                            <dd>The setting in which a word or statement appears that determines its meaning.</dd>
-                        </dl>
-                    </section>
-
-                    <section>
                         <ul>
-                            <li>is developed by having discussions with both consensus and compromise</li>
-                            <li>only exists within a specific (bounded) context</li>
-                            <li>grows and changes over time</li>
+                            <li>discuss and agree on terminology as a team</li>
+                            <li>create a glossary</li>
+                            <li>use one word for a specific concept, and only one concept per word</li>
+                            <li>point out imprecision and contradictions</li>
+                            <li>update the code as the language evolves</li>
+                            <li>avoid the use of acronyms and abbreviations</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <p><img src="images/jira-ticket-improved.png" height="137" /></p>
+
+                        <pre><code data-trim data-noescape class="php">
+                            class Checklist
+                            {
+                                public function disable()
+                                {
+                                    $this->enabled = false;
+                                }
+                            }
+                        </code></pre>
+
+                        <pre><code data-trim class="php">
+                            $checklist->disable();
+                        </code></pre>
                     </section>
                 </section>
             </div>
