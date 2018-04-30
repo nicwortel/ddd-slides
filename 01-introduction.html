@@ -205,6 +205,10 @@
                 <section>
                     <section>
                         <h2>Strategic vs Tactical design</h2>
+
+                        <aside class="notes">
+                            <p>To explain the difference we will look into military history</p>
+                        </aside>
                     </section>
 
                     <section data-background-color="#000" data-background-image="images/sun-tzu.jpg"
@@ -219,30 +223,57 @@
                         </blockquote>
                     </section>
 
-                    <section>
-                        <dl>
-                            <dt>strategy</dt>
-                            <dd></dd>
+                    <section data-background-image="images/von-clausewitz.jpeg" data-background-size="25%"
+                        data-background-position="bottom right">
+                        <blockquote>
+                            <p>Tactics are the use of armed forces in a particular battle, while strategy is the
+                                doctrine of the use of individual battles for the purpose of war.</p>
 
-                            <dt>strategic design</dt>
-                            <dd>Modeling and design decisions that apply to large parts of the system.</dd>
+                            <footer>
+                                <cite>— Carl von Clausewitz (1780-1831)</cite>
+                            </footer>
+                        </blockquote>
 
-                            <dt>tactical design</dt>
-                            <dd></dd>
-                        </dl>
+                        <aside class="notes">
+                            <ul>
+                                <li>tactics are about successfully executing battles</li>
+                                <li>strategy is about using battles to win the war</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
                         <h2>Strategic design</h2>
+
                         <ul>
-                            <li></li>
-                            <li>Focusing effort/investments on the core of the system</li>
-                            <li>Helps to cleanly separate systems and business concerns</li>
+                            <li>Dividing large models into smaller models with explicit boundaries</li>
+                            <li>Facilitating collaboration and knowledge sharing by developing a ubiquitous language</li>
+                            <li>Focusing development effort on what is strategically important for the business</li>
+                            <li>Using existing solutions for generic problems (open-source or buying off the shelve)
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Strategic DDD patterns</h2>
+
+                        <ul>
+                            <li>bounded contexts</li>
+                            <li>ubiquitous language</li>
+                            <li>subdomains</li>
+                            <li>context maps</li>
                         </ul>
                     </section>
 
                     <section>
                         <h2>Tactical design</h2>
+
+                        <ul>
+                            <li>Separating <em>domain logic</em> from technical <em>implementation details</em></li>
+                            <li>Developing a rich <em>domain model</em> based on the <em>ubiquitous language</em></li>
+                            <li>Capturing the <em>ubiquitous language</em> and <em>domain model</em> in source code</li>
+                            <li>Enforcing <em>consistency</em> and <em>business invariants</em> in the software model</li>
+                        </ul>
                         <ul>
                             <li>Allows developers to produce software that correctly reflects the mental model of the
                                 domain expert(s)
@@ -252,10 +283,14 @@
                     </section>
 
                     <section>
-                        <h2>Strategic patterns</h2>
+                        <h2>Tactical DDD patterns</h2>
 
                         <ul>
-                            <li></li>
+                            <li>entities</li>
+                            <li>value objects</li>
+                            <li>aggregates</li>
+                            <li>domain events</li>
+                            <li>repositories</li>
                         </ul>
                     </section>
                 </section>
