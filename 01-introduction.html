@@ -243,55 +243,40 @@
                     </section>
 
                     <section>
-                        <h2>Strategic design</h2>
+                        <dl>
+                            <dt>strategic design</dt>
+                            <dd>Modeling and design decisions that apply to large parts of the system.</dd>
 
-                        <ul>
-                            <li>Dividing large models into smaller models with explicit boundaries</li>
-                            <li>Facilitating collaboration and knowledge sharing by developing a ubiquitous language</li>
-                            <li>Focusing development effort on what is strategically important for the business</li>
-                            <li>Using existing solutions for generic problems (open-source or buying off the shelve)
-                            </li>
-                        </ul>
+                            <dt>tactical design</dt>
+                            <dd>Modeling and design decisions that apply to the implementation of a smaller part of the
+                                system.
+                            </dd>
+                        </dl>
                     </section>
 
                     <section>
-                        <h2>Strategic DDD patterns</h2>
+                        <h2>Strategic design</h2>
 
-                        <ul>
-                            <li>bounded contexts</li>
-                            <li>ubiquitous language</li>
-                            <li>subdomains</li>
-                            <li>context maps</li>
-                        </ul>
+                        <p>Splitting up a large domain model and focusing development effort on what is strategically
+                            important for the business (the <em>core domain</em>).</p>
                     </section>
 
                     <section>
                         <h2>Tactical design</h2>
 
-                        <ul>
-                            <li>Separating <em>domain logic</em> from technical <em>implementation details</em></li>
-                            <li>Developing a rich <em>domain model</em> based on the <em>ubiquitous language</em></li>
-                            <li>Capturing the <em>ubiquitous language</em> and <em>domain model</em> in source code</li>
-                            <li>Enforcing <em>consistency</em> and <em>business invariants</em> in the software model</li>
-                        </ul>
-                        <ul>
-                            <li>Allows developers to produce software that correctly reflects the mental model of the
-                                domain expert(s)
-                            </li>
-                            <li>Allows developers to produce software that is highly testable and less error prone</li>
-                        </ul>
+                        <p>Building a rich domain model that reflects our mental model and the ubiquitous language.</p>
+                    </section>
+
+                    <section>
+                        <h2>Strategic DDD patterns</h2>
+
+                        <p><img src="images/strategic-patterns.png" height="402" /></p>
                     </section>
 
                     <section>
                         <h2>Tactical DDD patterns</h2>
 
-                        <ul>
-                            <li>entities</li>
-                            <li>value objects</li>
-                            <li>aggregates</li>
-                            <li>domain events</li>
-                            <li>repositories</li>
-                        </ul>
+                        <p><img src="images/tactical-patterns.png" height="500" /></p>
                     </section>
                 </section>
 
