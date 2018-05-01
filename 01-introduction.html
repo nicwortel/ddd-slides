@@ -365,11 +365,11 @@
                         <ul>
                             <li>used everywhere:
                                 <ul>
-                                    <li>in user stories</li>
-                                    <li>during discussions and meetings</li>
-                                    <li>in BDD features and scenarios</li>
+                                    <li>in user stories (post-its, Jira)</li>
+                                    <li>during discussions, backlog refinements, etc.</li>
                                     <li>in documentation</li>
-                                    <li>in test and source code</li>
+                                    <li>in automated tests</li>
+                                    <li>last but not least, in the source code</li>
                                 </ul>
                             </li>
                             <li>used by everyone on the team: developers and domain experts</li>
@@ -396,6 +396,27 @@
                             <li>update the code as the language evolves</li>
                             <li>avoid the use of acronyms and abbreviations</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <h2>Use BDD Features / scenarios</h2>
+
+                        <pre><code data-trim class="gherkin">
+                            Feature: Disabling a checklist
+                              In order to quickly find the right checklist
+                              As an inspector
+                              I want to disable checklists that are no longer used
+
+                              Scenario: Disabling an active checklist
+                                Given an active checklist
+                                When I disable the checklist
+                                Then the checklist should no longer be visible
+
+                              Scenario: Disabling a checklist that is already disabled
+                                Given a disabled checklist
+                                When I disable the checklist
+                                Then I should get an error
+                        </code></pre>
                     </section>
 
                     <section>
